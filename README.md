@@ -5,7 +5,7 @@
 
 **SpringBoot+mybatis 切换多数据源**
 
-项目地址：[ssm/SwitchingMultipleDatasources](https://github.com/you170917/java/tree/main/ssm/SwitchingMultipleDatasources)
+项目地址：[SwitchingMultipleDatasources](https://github.com/you170917/java/tree/main/SwitchingMultipleDatasources)
 
 注意：Springboot2.0 在配置数据库连接的时候需要使用 `jdbc-url`，如果只使用 url 的话会报
 `jdbcUrl is required with driverClassName.`错误。
@@ -30,14 +30,14 @@ spring.datasource.two.jdbc-url=jdbc:mysql://127.0.0.1:3306/vhr?serverTimezone=UT
 
 **手写线程池 starter**
 
-项目地址：[java/threadpool](https://github.com/you170917/java/tree/main/java/threadpool)
+项目地址：[threadpool](https://github.com/you170917/java/tree/main/threadpool)
 
 新建了一个 Maven 空工程，在其中建两个 SpringBoot 子工程：
 
 - threadpool-spring-boot-starter
 - demo
 
-其中，[threadpool-spring-boot-starter](https://github.com/you170917/java/tree/main/java/threadpool/threadpool-spring-boot-starter) 就是一个简易的线程池。
+其中，[threadpool-spring-boot-starter](https://github.com/you170917/java/tree/main/threadpool/threadpool-spring-boot-starter) 就是一个简易的线程池。
 
 然后在 demo 工程的 pom 文件中，引入 threadpool-spring-boot-starter 依赖：
 
@@ -55,7 +55,7 @@ spring.datasource.two.jdbc-url=jdbc:mysql://127.0.0.1:3306/vhr?serverTimezone=UT
 
 **SpringBoot + Mybatis 单元测试案例**
 
-项目地址：[java/testdemo](https://github.com/you170917/java/tree/main/java/testdemo)
+项目地址：[testdemo](https://github.com/you170917/java/tree/main/testdemo)
 
 大致流程：连接本地数据库，通过 mybatis 查询所有的 role。
 
@@ -75,7 +75,7 @@ public class TestController {
 }
 ```
 
-省略 service、mapper、bean层代码，详情见：[java/testdemo](https://github.com/you170917/java/tree/main/java/testdemo)
+省略 service、mapper、bean层代码，详情见：[testdemo](https://github.com/you170917/java/tree/main/testdemo)
 
 单元测试代码如下：
 
@@ -112,7 +112,7 @@ class TestdemoApplicationTests {
 
 **Mybatis-Plus demo**
 
-项目地址：[ssm/mybatis-plus](https://github.com/you170917/java/tree/main/ssm/mybatis-plus)
+项目地址：[mybatis-plus](https://github.com/you170917/java/tree/main/mybatis-plus)
 
 学习 Mybatis-Plus，参照官网，写一个 demo。
 
@@ -122,6 +122,6 @@ class TestdemoApplicationTests {
 
 **手写简易 AOP**
 
-项目地址：[Spring/aop](https://github.com/you170917/java/tree/main/Spring/aop)
+项目地址：[aop](https://github.com/you170917/java/tree/main/aop)
 
 基于 JVM 动态代理，手写简易 AOP，实现前置处理和后置处理。
