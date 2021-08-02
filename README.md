@@ -3,11 +3,41 @@
 
 ## 2021年8月2日
 
+**SpringBoot + Cache + Redis 缓存demo**
+
+项目地址：[cachedemo](https://github.com/you170917/java/tree/main/cachedemo)
+
+对于 SpringBoot cache，主要是在启动类上添加注解`@EnableCaching`开启缓存，并在需要使用缓存的方法上，使用注解`@Cacheable`:
+
+```java
+@Service
+public class UserService {
+
+    @Autowired
+    UserMapper userMapper;
+
+    @Cacheable(cacheNames = "users")
+    public List<User> getAllUsers() {
+        return userMapper.getAllUsers();
+    }
+}
+```
+
+在需要加缓存的方法上添加注解 `@Cacheable(cacheNames = "xxx", key = "xxx")`,
+
+`cacheNames` 和 `key` 都必须填，如果不填 `key` ，默认的 `key` 是当前的方法名。
+
+对于 Redis ，主要使用 `StringRedisTemplate` 和 `RedisTemplate`
+
+两者的区别，参考文章：[https://www.cnblogs.com/JiangLai/p/9999811.html](https://www.cnblogs.com/JiangLai/p/9999811.html)
+
+## 2021年8月2日
+
 **SpringBoot+mybatis 切换多数据源**
 
 项目地址：[SwitchingMultipleDatasources](https://github.com/you170917/java/tree/main/SwitchingMultipleDatasources)
 
-注意：Springboot2.0 在配置数据库连接的时候需要使用 `jdbc-url`，如果只使用 url 的话会报
+注意：Springboot2.0 在配置多数据源连接的时候需要使用 `jdbc-url`，如果只使用 url 的话会报
 `jdbcUrl is required with driverClassName.`错误。
 
 ```properties
