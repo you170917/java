@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mybatisplus.mapper.EmployeeMapper">
+  <resultMap id="BaseResultMap" type="com.example.mybatisplus.bean.Employee">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="idCard" jdbcType="CHAR" property="idCard" />
+    <result column="wedlock" jdbcType="CHAR" property="wedlock" />
+    <result column="nationId" jdbcType="INTEGER" property="nationId" />
+    <result column="nativePlace" jdbcType="VARCHAR" property="nativePlace" />
+    <result column="politicId" jdbcType="INTEGER" property="politicId" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="departmentId" jdbcType="INTEGER" property="departmentId" />
+    <result column="jobLevelId" jdbcType="INTEGER" property="jobLevelId" />
+    <result column="posId" jdbcType="INTEGER" property="posId" />
+    <result column="engageForm" jdbcType="VARCHAR" property="engageForm" />
+    <result column="tiptopDegree" jdbcType="CHAR" property="tiptopDegree" />
+    <result column="specialty" jdbcType="VARCHAR" property="specialty" />
+    <result column="school" jdbcType="VARCHAR" property="school" />
+    <result column="beginDate" jdbcType="DATE" property="beginDate" />
+    <result column="workState" jdbcType="CHAR" property="workState" />
+    <result column="workID" jdbcType="CHAR" property="workID" />
+    <result column="contractTerm" jdbcType="DOUBLE" property="contractTerm" />
+    <result column="conversionTime" jdbcType="DATE" property="conversionTime" />
+    <result column="notWorkDate" jdbcType="DATE" property="notWorkDate" />
+    <result column="beginContract" jdbcType="DATE" property="beginContract" />
+    <result column="endContract" jdbcType="DATE" property="endContract" />
+    <result column="workAge" jdbcType="INTEGER" property="workAge" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from employee
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.mybatisplus.bean.Employee">
+    insert into employee (id, name, gender, 
+      birthday, idCard, wedlock, nationId, 
+      nativePlace, politicId, email, 
+      phone, address, departmentId, 
+      jobLevelId, posId, engageForm, 
+      tiptopDegree, specialty, school, 
+      beginDate, workState, workID, 
+      contractTerm, conversionTime, notWorkDate, 
+      beginContract, endContract, workAge
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, 
+      #{birthday,jdbcType=DATE}, #{idCard,jdbcType=CHAR}, #{wedlock,jdbcType=CHAR}, #{nationId,jdbcType=INTEGER}, 
+      #{nativePlace,jdbcType=VARCHAR}, #{politicId,jdbcType=INTEGER}, #{email,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{departmentId,jdbcType=INTEGER}, 
+      #{jobLevelId,jdbcType=INTEGER}, #{posId,jdbcType=INTEGER}, #{engageForm,jdbcType=VARCHAR}, 
+      #{tiptopDegree,jdbcType=CHAR}, #{specialty,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR}, 
+      #{beginDate,jdbcType=DATE}, #{workState,jdbcType=CHAR}, #{workID,jdbcType=CHAR}, 
+      #{contractTerm,jdbcType=DOUBLE}, #{conversionTime,jdbcType=DATE}, #{notWorkDate,jdbcType=DATE}, 
+      #{beginContract,jdbcType=DATE}, #{endContract,jdbcType=DATE}, #{workAge,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.example.mybatisplus.bean.Employee">
+    update employee
+    set name = #{name,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=CHAR},
+      birthday = #{birthday,jdbcType=DATE},
+      idCard = #{idCard,jdbcType=CHAR},
+      wedlock = #{wedlock,jdbcType=CHAR},
+      nationId = #{nationId,jdbcType=INTEGER},
+      nativePlace = #{nativePlace,jdbcType=VARCHAR},
+      politicId = #{politicId,jdbcType=INTEGER},
+      email = #{email,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      departmentId = #{departmentId,jdbcType=INTEGER},
+      jobLevelId = #{jobLevelId,jdbcType=INTEGER},
+      posId = #{posId,jdbcType=INTEGER},
+      engageForm = #{engageForm,jdbcType=VARCHAR},
+      tiptopDegree = #{tiptopDegree,jdbcType=CHAR},
+      specialty = #{specialty,jdbcType=VARCHAR},
+      school = #{school,jdbcType=VARCHAR},
+      beginDate = #{beginDate,jdbcType=DATE},
+      workState = #{workState,jdbcType=CHAR},
+      workID = #{workID,jdbcType=CHAR},
+      contractTerm = #{contractTerm,jdbcType=DOUBLE},
+      conversionTime = #{conversionTime,jdbcType=DATE},
+      notWorkDate = #{notWorkDate,jdbcType=DATE},
+      beginContract = #{beginContract,jdbcType=DATE},
+      endContract = #{endContract,jdbcType=DATE},
+      workAge = #{workAge,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, name, gender, birthday, idCard, wedlock, nationId, nativePlace, politicId, 
+    email, phone, address, departmentId, jobLevelId, posId, engageForm, tiptopDegree, 
+    specialty, school, beginDate, workState, workID, contractTerm, conversionTime, notWorkDate, 
+    beginContract, endContract, workAge
+    from employee
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, name, gender, birthday, idCard, wedlock, nationId, nativePlace, politicId, 
+    email, phone, address, departmentId, jobLevelId, posId, engageForm, tiptopDegree, 
+    specialty, school, beginDate, workState, workID, contractTerm, conversionTime, notWorkDate, 
+    beginContract, endContract, workAge
+    from employee
+  </select>
+</mapper>

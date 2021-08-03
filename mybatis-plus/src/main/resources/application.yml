@@ -1,9 +1,22 @@
 # DataSource Config
+#spring:
+#  datasource:
+#    driver-class-name: org.h2.Driver
+#    schema: classpath:db/schema-h2.sql
+#    data: classpath:db/data-h2.sql
+#    url: jdbc:h2:mem:test
+#    username: root
+#    password: test
+
+# 配置本地数据源
 spring:
   datasource:
-    driver-class-name: org.h2.Driver
-    schema: classpath:db/schema-h2.sql
-    data: classpath:db/data-h2.sql
-    url: jdbc:h2:mem:test
+    type: com.alibaba.druid.pool.DruidDataSource
     username: root
-    password: test
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/vhr?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+
