@@ -1,6 +1,16 @@
 # java
 在 java 开发的学习和实践中，撸的各种轮子。
 
+## 2021年8月3日
+
+**Mybatis-Plus demo**
+
+项目地址：[mybatis-plus](https://github.com/you170917/java/tree/main/mybatis-plus)
+
+熟悉对 mybatis-plus 的应用，尤其是 `BaseMapper`、`QueryWrapper`、`UpdateWrapper`的用法，具体参考文章：[MyBatis-Plus 条件构造器 Wrapper 的用法](https://www.cnblogs.com/youcoding/p/15094467.html)
+
+使用 mybatis-plus 报错 `SQLSyntaxErrorException: Unknown column 'xxx' in 'field list'` 的话，参考文章 [https://www.cnblogs.com/youcoding/p/15094249.html](https://www.cnblogs.com/youcoding/p/15094249.html)
+
 ## 2021年8月2日
 
 **SpringBoot + Cache + Redis 缓存demo**
