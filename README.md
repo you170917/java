@@ -1,6 +1,16 @@
 # java
 在 java 开发的学习和实践中，撸的各种轮子。
 
+## 2021年8月9日
+
+**mybatis_annotations_develop**
+
+项目地址：[mybatis_annotations_develop](https://github.com/you170917/java/tree/main/mybatis_annotations_develop)
+
+熟悉注解 @Insert、@Update、 @Delete、@Select 的使用。
+
+参考文章：[https://blog.csdn.net/weixin_43883917/article/details/113830667](https://blog.csdn.net/weixin_43883917/article/details/113830667)
+
 ## 2021年8月3日
 
 **Mybatis-Plus demo**
