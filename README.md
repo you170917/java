@@ -1,6 +1,26 @@
 # java
 在 java 开发的学习和实践中，撸的各种轮子。
 
+## 2021年8月11日
+
+**mybatis_cache_demo**
+
+项目地址：[mybatis_cache_demo](https://github.com/you170917/java/tree/main/mybatis_cache_demo)
+
+在 SpringBoot 中使用 mybatis 缓存的示例。
+
+具体参考文章：[https://www.cnblogs.com/youcoding/p/15127380.html](https://www.cnblogs.com/youcoding/p/15127380.html)
+
+## 2021年8月11日
+
+**mybatis_pagehelper_demo**
+
+项目地址：[mybatis_pagehelper_demo](https://github.com/you170917/java/tree/main/mybatis_pagehelper_demo)
+
+使用  mybatis_pagehelper 分页插件的示例。
+
+具体参考文章：[https://www.jianshu.com/p/48b190bf08fe](https://www.jianshu.com/p/48b190bf08fe)
+
 ## 2021年8月9日
 
 **mybatis_annotations_develop**
